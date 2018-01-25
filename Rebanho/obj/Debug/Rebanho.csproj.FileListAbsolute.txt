@@ -1,0 +1,310 @@
+c:\users\cidronio\documents\visual studio 2015\Projects\Rebanho\Rebanho\bin\Debug\Rebanho.exe.config
+c:\users\cidronio\documents\visual studio 2015\Projects\Rebanho\Rebanho\bin\Debug\Rebanho.exe
+c:\users\cidronio\documents\visual studio 2015\Projects\Rebanho\Rebanho\bin\Debug\Rebanho.pdb
+c:\users\cidronio\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.Properties.Resources.resources
+c:\users\cidronio\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.csproj.GenerateResource.Cache
+c:\users\cidronio\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.exe
+c:\users\cidronio\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.pdb
+c:\users\cidronio\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmPrincipal.resources
+c:\users\cidronio\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmCadastroAnimais.resources
+C:\Users\CIDRONIO\Documents\Visual Studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmRaca.resources
+C:\Users\CIDRONIO\Documents\Visual Studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmInseminadores.resources
+C:\Users\CIDRONIO\Documents\Visual Studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmProprietarioCriador.resources
+C:\Users\CIDRONIO\Documents\Visual Studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmEventosSanitarios.resources
+C:\Users\CIDRONIO\Documents\Visual Studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmBuscaMatriz.resources
+C:\Users\CIDRONIO\Documents\Visual Studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmCausasMortis.resources
+C:\Users\CIDRONIO\Documents\Visual Studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmCadastroLocais.resources
+C:\Users\CIDRONIO\Documents\Visual Studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmResgistraSistema.resources
+C:\Users\CIDRONIO\Documents\Visual Studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmParametrosSistema.resources
+C:\Users\CIDRONIO\Documents\Visual Studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroCompras.resources
+C:\Users\CIDRONIO\Documents\Visual Studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroCobertura.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroCobertura1.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroPesagem.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroPesagem1.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistraParto.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmDiagnosticoGestacao.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmConsultaPartosAnteriores.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroEventosSanitarios.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmConsultaEventosSanitários.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmAbrirLactacao1.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmAbrirLactacao.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmEventosSanitarios1.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmMedicamentos.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmControleAcesso.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmTransferenciaIndividual.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmTransferenciaIndividual1.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroDesmamaIndividual.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroDesmamaIndividual1.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroDesmamaGrupo.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroBaixa.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroBaixaIndidual1.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroVendas.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroVendas1.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroOrdenha.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroOrdenha1.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmColetaEmbrioes.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmColetaEmbriões1.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmDiagnosticoGestação1.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmConsultaPartosAnteriores1.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmGenealogia.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmInsumos.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmInsumosMaisDetalhes.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmCadastroFornecedores.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmContasAPagar.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmCadastroFerramentas.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.csprojResolveAssemblyReference.cache
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmCopiaSeguranca1.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmRealizarBackup.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmRestaurarBackup.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmCadastraClientes.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmCadastroFuncionario.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmLogin1.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\bin\Debug\Control.dll
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\bin\Debug\Model.dll
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\bin\Debug\Control.pdb
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\bin\Debug\Model.pdb
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmMatriz.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmReprodutor.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmSplash1.resources
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Rebanho\obj\Debug\Rebanho.frmContasAReceber.resources
+C:\Rebanho\Rebanho\bin\Debug\Rebanho.exe.config
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.exe
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.pdb
+C:\Rebanho\Rebanho\bin\Debug\Rebanho.exe
+C:\Rebanho\Rebanho\bin\Debug\Rebanho.pdb
+C:\Rebanho\Rebanho\bin\Debug\Control.dll
+C:\Rebanho\Rebanho\bin\Debug\Control.pdb
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.csprojResolveAssemblyReference.cache
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmAbrirLactacao.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmAbrirLactacao1.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmCadastraClientes.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmCadastroFerramentas.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmCadastroFornecedores.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmCadastroFuncionario.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmColetaEmbrioes.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmColetaEmbriões1.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmConsultaEventosSanitários.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmConsultaPartosAnteriores.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmConsultaPartosAnteriores1.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmContasAPagar.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmContasAReceber.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmControleAcesso.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmCopiaSeguranca1.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmDiagnosticoGestacao.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmDiagnosticoGestação1.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmEventosSanitarios1.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmGenealogia.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmInsumos.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmInsumosMaisDetalhes.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmLogin1.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmMatriz.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmMedicamentos.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmRealizarBackup.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistraParto.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroBaixa.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroBaixaIndidual1.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroCobertura1.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmCadastroLocais.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmBuscaMatriz.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmCausasMortis.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmEventosSanitarios.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmInseminadores.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmParametrosSistema.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmPrincipal.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmCadastroAnimais.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmProprietarioCriador.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmRaca.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroCobertura.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroCompras.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroDesmamaGrupo.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroDesmamaIndividual.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroDesmamaIndividual1.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroEventosSanitarios.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroOrdenha.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroOrdenha1.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroPesagem.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroPesagem1.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroVendas.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroVendas1.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmReprodutor.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmResgistraSistema.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmRestaurarBackup.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmSplash1.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmTransferenciaIndividual.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.frmTransferenciaIndividual1.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.Properties.Resources.resources
+C:\Rebanho\Rebanho\obj\Debug\Rebanho.csproj.GenerateResource.Cache
+C:\Rebanho\Rebanho\bin\Debug\LiveCharts.dll
+C:\Rebanho\Rebanho\bin\Debug\LiveCharts.WinForms.dll
+C:\Rebanho\Rebanho\bin\Debug\LiveCharts.Wpf.dll
+C:\Rebanho\Rebanho\bin\Debug\LiveCharts.pdb
+C:\Rebanho\Rebanho\bin\Debug\LiveCharts.xml
+C:\Rebanho\Rebanho\bin\Debug\LiveCharts.WinForms.pdb
+C:\Rebanho\Rebanho\bin\Debug\LiveCharts.WinForms.xml
+C:\Rebanho\Rebanho\bin\Debug\LiveCharts.Wpf.pdb
+C:\Rebanho\Rebanho\bin\Debug\LiveCharts.Wpf.xml
+C:\Rebanho\Rebanho\bin\Debug\DALL.dll
+C:\Rebanho\Rebanho\bin\Debug\DALL.pdb
+C:\Rebanho\Rebanho\bin\Debug\MySql.Data.dll
+K:\PROJETOS C#\Rebanho\Rebanho\bin\Debug\Rebanho.exe.config
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.exe
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.pdb
+K:\PROJETOS C#\Rebanho\Rebanho\bin\Debug\Rebanho.exe
+K:\PROJETOS C#\Rebanho\Rebanho\bin\Debug\Rebanho.pdb
+K:\PROJETOS C#\Rebanho\Rebanho\bin\Debug\Control.dll
+K:\PROJETOS C#\Rebanho\Rebanho\bin\Debug\DALL.dll
+K:\PROJETOS C#\Rebanho\Rebanho\bin\Debug\LiveCharts.dll
+K:\PROJETOS C#\Rebanho\Rebanho\bin\Debug\LiveCharts.WinForms.dll
+K:\PROJETOS C#\Rebanho\Rebanho\bin\Debug\LiveCharts.Wpf.dll
+K:\PROJETOS C#\Rebanho\Rebanho\bin\Debug\MySql.Data.dll
+K:\PROJETOS C#\Rebanho\Rebanho\bin\Debug\Control.pdb
+K:\PROJETOS C#\Rebanho\Rebanho\bin\Debug\DALL.pdb
+K:\PROJETOS C#\Rebanho\Rebanho\bin\Debug\LiveCharts.pdb
+K:\PROJETOS C#\Rebanho\Rebanho\bin\Debug\LiveCharts.xml
+K:\PROJETOS C#\Rebanho\Rebanho\bin\Debug\LiveCharts.WinForms.pdb
+K:\PROJETOS C#\Rebanho\Rebanho\bin\Debug\LiveCharts.WinForms.xml
+K:\PROJETOS C#\Rebanho\Rebanho\bin\Debug\LiveCharts.Wpf.pdb
+K:\PROJETOS C#\Rebanho\Rebanho\bin\Debug\LiveCharts.Wpf.xml
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.csprojResolveAssemblyReference.cache
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmAbrirLactacao.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmAbrirLactacao1.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmCadastraClientes.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmCadastroFerramentas.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmCadastroFornecedores.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmCadastroFuncionario.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmColetaEmbrioes.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmColetaEmbriões1.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmConsultaEventosSanitários.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmConsultaPartosAnteriores.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmConsultaPartosAnteriores1.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmContasAPagar.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmContasAReceber.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmControleAcesso.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmCopiaSeguranca1.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmDiagnosticoGestacao.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmDiagnosticoGestação1.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmEventosSanitarios1.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmGenealogia.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmInsumos.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmInsumosMaisDetalhes.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmLogin1.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmMatriz.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmMedicamentos.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmRealizarBackup.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistraParto.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroBaixa.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroBaixaIndidual1.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroCobertura1.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmCadastroLocais.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmBuscaMatriz.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmCausasMortis.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmEventosSanitarios.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmInseminadores.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmParametrosSistema.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmPrincipal.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmCadastroAnimais.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmProprietarioCriador.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmRaca.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroCobertura.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroCompras.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroDesmamaGrupo.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroDesmamaIndividual.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroDesmamaIndividual1.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroEventosSanitarios.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroOrdenha.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroOrdenha1.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroPesagem.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroPesagem1.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroVendas.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroVendas1.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmReprodutor.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmResgistraSistema.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmRestaurarBackup.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmSplash1.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmTransferenciaIndividual.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmTransferenciaIndividual1.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.Properties.Resources.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.csproj.GenerateResource.Cache
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmCadastroCategoria.resources
+K:\PROJETOS C#\Rebanho\Rebanho\obj\Debug\Rebanho.frmUnidade.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\bin\Debug\Rebanho.exe.config
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.exe
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.pdb
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\bin\Debug\Rebanho.exe
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\bin\Debug\Rebanho.pdb
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\bin\Debug\Control.dll
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\bin\Debug\DALL.dll
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\bin\Debug\LiveCharts.dll
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\bin\Debug\MySql.Data.dll
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\bin\Debug\Control.pdb
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\bin\Debug\DALL.pdb
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\bin\Debug\LiveCharts.pdb
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\bin\Debug\LiveCharts.xml
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.csprojResolveAssemblyReference.cache
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmAbrirLactacao.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmAbrirLactacao1.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmCadastraClientes.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmCadastroCategoria.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmCadastroFerramentas.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmCadastroFornecedores.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmCadastroFuncionario.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmColetaEmbrioes.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmColetaEmbriões1.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmConsultaEventosSanitários.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmConsultaPartosAnteriores.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmConsultaPartosAnteriores1.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmContasAPagar.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmContasAReceber.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmControleAcesso.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmCopiaSeguranca1.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmDiagnosticoGestacao.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmDiagnosticoGestação1.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmEventosSanitarios1.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmGenealogia.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmInsumos.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmInsumosMaisDetalhes.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmLogin1.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmMatriz.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmMedicamentos.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmRealizarBackup.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistraParto.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroBaixa.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroBaixaIndidual1.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroCobertura1.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmCadastroLocais.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmBuscaMatriz.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmCausasMortis.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmEventosSanitarios.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmInseminadores.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmParametrosSistema.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmPrincipal.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmCadastroAnimais.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmProprietarioCriador.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmRaca.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroCobertura.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroCompras.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroDesmamaGrupo.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroDesmamaIndividual.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroDesmamaIndividual1.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroEventosSanitarios.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroOrdenha.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroOrdenha1.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroPesagem.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroPesagem1.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroVendas.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmRegistroVendas1.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmReprodutor.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmResgistraSistema.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmRestaurarBackup.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmSplash1.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmTransferenciaIndividual.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmTransferenciaIndividual1.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.frmUnidade.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.Properties.Resources.resources
+C:\Users\Manoel\Desktop\Rebanho\Rebanho\obj\Debug\Rebanho.csproj.GenerateResource.Cache

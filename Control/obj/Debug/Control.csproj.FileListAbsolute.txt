@@ -1,0 +1,29 @@
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Control\bin\Debug\Control.dll
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Control\bin\Debug\Control.pdb
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Control\bin\Debug\Model.dll
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Control\bin\Debug\Model.pdb
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Control\obj\Debug\Control.csprojResolveAssemblyReference.cache
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Control\obj\Debug\Control.dll
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Control\obj\Debug\Control.pdb
+C:\Rebanho\Control\bin\Debug\Control.dll
+C:\Rebanho\Control\bin\Debug\Control.pdb
+C:\Rebanho\Control\obj\Debug\Control.csprojResolveAssemblyReference.cache
+C:\Rebanho\Control\obj\Debug\Control.dll
+C:\Rebanho\Control\obj\Debug\Control.pdb
+C:\Rebanho\Control\bin\Debug\DALL.dll
+C:\Rebanho\Control\bin\Debug\DALL.pdb
+C:\Rebanho\Control\bin\Debug\MySql.Data.dll
+K:\PROJETOS C#\Rebanho\Control\obj\Debug\Control.csprojResolveAssemblyReference.cache
+K:\PROJETOS C#\Rebanho\Control\obj\Debug\Control.dll
+K:\PROJETOS C#\Rebanho\Control\obj\Debug\Control.pdb
+K:\PROJETOS C#\Rebanho\Control\bin\Debug\Control.dll
+K:\PROJETOS C#\Rebanho\Control\bin\Debug\Control.pdb
+K:\PROJETOS C#\Rebanho\Control\bin\Debug\DALL.dll
+K:\PROJETOS C#\Rebanho\Control\bin\Debug\DALL.pdb
+C:\Users\Manoel\Desktop\Rebanho\Control\bin\Debug\Control.dll
+C:\Users\Manoel\Desktop\Rebanho\Control\bin\Debug\Control.pdb
+C:\Users\Manoel\Desktop\Rebanho\Control\bin\Debug\DALL.dll
+C:\Users\Manoel\Desktop\Rebanho\Control\bin\Debug\DALL.pdb
+C:\Users\Manoel\Desktop\Rebanho\Control\obj\Debug\Control.csprojResolveAssemblyReference.cache
+C:\Users\Manoel\Desktop\Rebanho\Control\obj\Debug\Control.dll
+C:\Users\Manoel\Desktop\Rebanho\Control\obj\Debug\Control.pdb

@@ -1,0 +1,5 @@
+C:\Rebanho\DALL\obj\Debug\DALL.csprojResolveAssemblyReference.cache
+C:\Rebanho\DALL\bin\Debug\DALL.dll
+C:\Rebanho\DALL\bin\Debug\DALL.pdb
+C:\Rebanho\DALL\obj\Debug\DALL.dll
+C:\Rebanho\DALL\obj\Debug\DALL.pdb

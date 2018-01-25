@@ -1,0 +1,12 @@
+C:\Rebanho\DALL\bin\Debug\DALL.dll
+C:\Rebanho\DALL\bin\Debug\DALL.pdb
+C:\Rebanho\DALL\obj\Debug\DALL.dll
+C:\Rebanho\DALL\obj\Debug\DALL.pdb
+K:\PROJETOS C#\Rebanho\DALL\bin\Debug\DALL.dll
+K:\PROJETOS C#\Rebanho\DALL\bin\Debug\DALL.pdb
+K:\PROJETOS C#\Rebanho\DALL\obj\Debug\DALL.dll
+K:\PROJETOS C#\Rebanho\DALL\obj\Debug\DALL.pdb
+C:\Users\Manoel\Desktop\Rebanho\DALL\bin\Debug\DALL.dll
+C:\Users\Manoel\Desktop\Rebanho\DALL\bin\Debug\DALL.pdb
+C:\Users\Manoel\Desktop\Rebanho\DALL\obj\Debug\DALL.dll
+C:\Users\Manoel\Desktop\Rebanho\DALL\obj\Debug\DALL.pdb

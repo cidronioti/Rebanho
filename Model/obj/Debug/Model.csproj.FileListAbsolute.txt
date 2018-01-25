@@ -1,0 +1,4 @@
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Model\bin\Debug\Model.dll
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Model\bin\Debug\Model.pdb
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Model\obj\Debug\Model.dll
+C:\Users\CIDRONIO\documents\visual studio 2015\Projects\Rebanho\Model\obj\Debug\Model.pdb
