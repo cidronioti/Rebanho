@@ -1,0 +1,574 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+-- -----------------------------------------------------
+-- Schema berromysql
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema berromysql
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `berromysql` DEFAULT CHARACTER SET utf8 ;
+USE `berromysql` ;
+
+-- -----------------------------------------------------
+-- Table `berromysql`.`local1`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `berromysql`.`local1` (
+  `COD_LOCAL` VARCHAR(3) NOT NULL,
+  `NOME_LOCAL` VARCHAR(50) NULL DEFAULT NULL,
+  `AREA_LOCAL` DOUBLE NULL DEFAULT NULL,
+  `GRAMINEA` VARCHAR(30) NULL DEFAULT NULL,
+  `DATA_AVALIACAO` VARCHAR(10) NULL DEFAULT NULL,
+  `PADRAO_CORTE` VARCHAR(20) NULL DEFAULT NULL,
+  `PADRAO_PASTEJO` VARCHAR(20) NULL DEFAULT NULL,
+  `SUPORTE` DOUBLE NULL DEFAULT NULL,
+  `PASTEJO` DOUBLE NULL DEFAULT NULL,
+  `PERDA` DOUBLE NULL DEFAULT NULL,
+  `CONSUMO` DOUBLE NULL DEFAULT NULL,
+  `DESCANSO` INT(11) NULL DEFAULT NULL,
+  `OBS` VARCHAR(100) NULL DEFAULT NULL,
+  PRIMARY KEY (`COD_LOCAL`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `berromysql`.`raca`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `berromysql`.`raca` (
+  `COD_RACA` VARCHAR(3) NOT NULL,
+  `NOME_RACA` VARCHAR(50) NULL DEFAULT NULL,
+  `PERIODO_GESTACAO` INT(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`COD_RACA`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `berromysql`.`animal`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `berromysql`.`animal` (
+  `COD_ANIMAL` VARCHAR(7) NOT NULL,
+  `NOME_ANIMAL` VARCHAR(50) NULL DEFAULT NULL,
+  `DATA_NASCIMENTO` VARCHAR(10) NULL DEFAULT NULL,
+  `SEXO_ANIMAL` CHAR(1) NULL DEFAULT NULL,
+  `CITUACAO` VARCHAR(30) NULL DEFAULT NULL,
+  `BRINCO` VARCHAR(7) NULL DEFAULT NULL,
+  `COD_RACA` VARCHAR(3) NULL DEFAULT NULL,
+  `COD_LOCAL` VARCHAR(3) NULL DEFAULT NULL,
+  `CAMINHO_FOTO` VARCHAR(100) NULL DEFAULT NULL,
+  PRIMARY KEY (`COD_ANIMAL`),
+  INDEX `FK_ANIMAL_REFERENCE_LOCAL` (`COD_LOCAL` ASC),
+  INDEX `FK_ANIMAL_REFERENCE_RACA` (`COD_RACA` ASC),
+  CONSTRAINT `FK_ANIMAL_REFERENCE_LOCAL`
+    FOREIGN KEY (`COD_LOCAL`)
+    REFERENCES `berromysql`.`local1` (`COD_LOCAL`),
+  CONSTRAINT `FK_ANIMAL_REFERENCE_RACA`
+    FOREIGN KEY (`COD_RACA`)
+    REFERENCES `berromysql`.`raca` (`COD_RACA`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `berromysql`.`criador`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `berromysql`.`criador` (
+  `COD_CRIADOR` VARCHAR(3) NOT NULL,
+  `NOME_CRIADOR` VARCHAR(50) NULL DEFAULT NULL,
+  PRIMARY KEY (`COD_CRIADOR`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `berromysql`.`agrupamento`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `berromysql`.`agrupamento` (
+  `COD_AGRUPAMENTO` INT(11) NOT NULL AUTO_INCREMENT,
+  `DATA_BAIXA` VARCHAR(10) NULL DEFAULT NULL,
+  `GRAU_SANGUE` VARCHAR(10) NULL DEFAULT NULL,
+  `GRUPO` VARCHAR(20) NULL DEFAULT NULL,
+  `ORIGEM` VARCHAR(20) NULL DEFAULT NULL,
+  `DESTINACAO` VARCHAR(20) NULL DEFAULT NULL,
+  `PELAGEM` VARCHAR(20) NULL DEFAULT NULL,
+  `COD_DESMAMA` INT(11) NULL DEFAULT NULL,
+  `PAI` VARCHAR(7) NULL DEFAULT NULL,
+  `MAE` VARCHAR(7) NULL DEFAULT NULL,
+  `REGIME_ALIMETAR` VARCHAR(50) NULL DEFAULT NULL,
+  `OBS` VARCHAR(100) NULL DEFAULT NULL,
+  `COD_CRIADOR` VARCHAR(3) NULL DEFAULT NULL,
+  `COD_ANIMAL` VARCHAR(7) NULL DEFAULT NULL,
+  PRIMARY KEY (`COD_AGRUPAMENTO`),
+  INDEX `FK_AGRUPAME_REFERENCE_CRIADOR` (`COD_CRIADOR` ASC),
+  INDEX `FK_AGRUPAME_REFERENCE_ANIMAL` (`COD_ANIMAL` ASC),
+  CONSTRAINT `FK_AGRUPAME_REFERENCE_ANIMAL`
+    FOREIGN KEY (`COD_ANIMAL`)
+    REFERENCES `berromysql`.`animal` (`COD_ANIMAL`),
+  CONSTRAINT `FK_AGRUPAME_REFERENCE_CRIADOR`
+    FOREIGN KEY (`COD_CRIADOR`)
+    REFERENCES `berromysql`.`criador` (`COD_CRIADOR`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `berromysql`.`causas_mortis`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `berromysql`.`causas_mortis` (
+  `COD_CAUSAS_MORTIS` VARCHAR(3) NOT NULL,
+  `NOME_CAUSA` VARCHAR(50) NULL DEFAULT NULL,
+  PRIMARY KEY (`COD_CAUSAS_MORTIS`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `berromysql`.`baixa`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `berromysql`.`baixa` (
+  `COD_BAIXA` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `COD_ANIMAL` VARCHAR(7) NULL DEFAULT NULL,
+  `COD_CAUSAS_MORTIS` VARCHAR(3) NULL DEFAULT NULL,
+  `DATA_BAIXA` VARCHAR(10) NULL DEFAULT NULL,
+  `OBS` VARCHAR(50) NULL DEFAULT NULL,
+  PRIMARY KEY (`COD_BAIXA`),
+  UNIQUE INDEX `COD_BAIXA` (`COD_BAIXA` ASC),
+  INDEX `FK_BAIXA_REFERENCE_ANIMAL` (`COD_ANIMAL` ASC),
+  INDEX `FK_BAIXA_REFERENCE_CAUSAS_M` (`COD_CAUSAS_MORTIS` ASC),
+  CONSTRAINT `FK_BAIXA_REFERENCE_ANIMAL`
+    FOREIGN KEY (`COD_ANIMAL`)
+    REFERENCES `berromysql`.`animal` (`COD_ANIMAL`),
+  CONSTRAINT `FK_BAIXA_REFERENCE_CAUSAS_M`
+    FOREIGN KEY (`COD_CAUSAS_MORTIS`)
+    REFERENCES `berromysql`.`causas_mortis` (`COD_CAUSAS_MORTIS`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `berromysql`.`categoria`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `berromysql`.`categoria` (
+  `cod_categoria` INT(11) NOT NULL AUTO_INCREMENT,
+  `nome_categoria` VARCHAR(150) NOT NULL,
+  `flag` CHAR(1) NOT NULL,
+  PRIMARY KEY (`cod_categoria`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 6
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `berromysql`.`endereco`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `berromysql`.`endereco` (
+  `cod_endereco` INT(11) NOT NULL AUTO_INCREMENT,
+  `cep_endereco` VARCHAR(20) NULL DEFAULT NULL,
+  `rua_endereco` VARCHAR(150) NULL DEFAULT NULL,
+  `numero_endereco` VARCHAR(6) NULL DEFAULT NULL,
+  `bairro_endereco` VARCHAR(150) NULL DEFAULT NULL,
+  `cidade_endereco` VARCHAR(150) NULL DEFAULT NULL,
+  `obs_endereco` TEXT NULL DEFAULT NULL,
+  PRIMARY KEY (`cod_endereco`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 10
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `berromysql`.`cliente`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `berromysql`.`cliente` (
+  `COD_CLIENTE` INT(11) NOT NULL AUTO_INCREMENT,
+  `NOME_CLIENTE` VARCHAR(150) NULL DEFAULT NULL,
+  `CPF_CLIENTE` VARCHAR(20) NULL DEFAULT NULL,
+  `RG_CLIENTE` VARCHAR(20) NULL DEFAULT NULL,
+  `FONE_CLIENTE` VARCHAR(20) NULL DEFAULT NULL,
+  `PROPRIEDADE_CLIENTE` VARCHAR(150) NULL DEFAULT NULL,
+  `COD_ENDERECO` INT(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`COD_CLIENTE`),
+  INDEX `FK_CLIENTE_REFERENCE_ENDERECO` (`COD_ENDERECO` ASC),
+  CONSTRAINT `FK_CLIENTE_REFERENCE_ENDERECO`
+    FOREIGN KEY (`COD_ENDERECO`)
+    REFERENCES `berromysql`.`endereco` (`cod_endereco`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 2
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `berromysql`.`inseminadores`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `berromysql`.`inseminadores` (
+  `COD_INSEMINADORES` INT(11) NOT NULL AUTO_INCREMENT,
+  `REGISTRO` VARCHAR(15) NULL DEFAULT NULL,
+  `NOME` VARCHAR(50) NULL DEFAULT NULL,
+  `CRMV` VARCHAR(20) NULL DEFAULT NULL,
+  `FONE` VARCHAR(15) NULL DEFAULT NULL,
+  `EMAIL` VARCHAR(100) NULL DEFAULT NULL,
+  PRIMARY KEY (`COD_INSEMINADORES`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `berromysql`.`coberturas`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `berromysql`.`coberturas` (
+  `COD_COBERTURA` INT(11) NOT NULL AUTO_INCREMENT,
+  `COD_ANIMAL` VARCHAR(7) NULL DEFAULT NULL,
+  `COD_INSEMINADORES` INT(11) NULL DEFAULT NULL,
+  `DATA_CIO` VARCHAR(10) NULL DEFAULT NULL,
+  `HORA_CIO` VARCHAR(5) NULL DEFAULT NULL,
+  `TIPO_CORTURA` VARCHAR(30) NULL DEFAULT NULL,
+  `MACHO` VARCHAR(7) NULL DEFAULT NULL,
+  `PARTIDA` VARCHAR(20) NULL DEFAULT NULL,
+  `DOSES` INT(11) NULL DEFAULT NULL,
+  `OBS` VARCHAR(50) NULL DEFAULT NULL,
+  `VALOR_GASTO` DOUBLE NULL DEFAULT NULL,
+  PRIMARY KEY (`COD_COBERTURA`),
+  INDEX `FK_COBERTUR_REFERENCE_INSEMINA` (`COD_INSEMINADORES` ASC),
+  INDEX `FK_COBERTUR_REFERENCE_ANIMAL` (`COD_ANIMAL` ASC),
+  CONSTRAINT `FK_COBERTUR_REFERENCE_ANIMAL`
+    FOREIGN KEY (`COD_ANIMAL`)
+    REFERENCES `berromysql`.`animal` (`COD_ANIMAL`),
+  CONSTRAINT `FK_COBERTUR_REFERENCE_INSEMINA`
+    FOREIGN KEY (`COD_INSEMINADORES`)
+    REFERENCES `berromysql`.`inseminadores` (`COD_INSEMINADORES`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `berromysql`.`coleta_embrioes`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `berromysql`.`coleta_embrioes` (
+  `COD_COLETA_EMBRIOES` INT(11) NOT NULL AUTO_INCREMENT,
+  `COD_ANIMAL` VARCHAR(7) NULL DEFAULT NULL,
+  `DATA_COLETA` VARCHAR(10) NULL DEFAULT NULL,
+  `VALOR` DOUBLE NULL DEFAULT NULL,
+  `NUM_EMBRIOES` INT(11) NULL DEFAULT NULL,
+  `ESTADO_SEMEN` VARCHAR(15) NULL DEFAULT NULL,
+  `RESPONSAVEL` VARCHAR(50) NULL DEFAULT NULL,
+  `OBS` VARCHAR(100) NULL DEFAULT NULL,
+  PRIMARY KEY (`COD_COLETA_EMBRIOES`),
+  INDEX `FK_COLETA_E_REFERENCE_ANIMAL` (`COD_ANIMAL` ASC),
+  CONSTRAINT `FK_COLETA_E_REFERENCE_ANIMAL`
+    FOREIGN KEY (`COD_ANIMAL`)
+    REFERENCES `berromysql`.`animal` (`COD_ANIMAL`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `berromysql`.`compra`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `berromysql`.`compra` (
+  `COD_COMPRA` INT(11) NOT NULL AUTO_INCREMENT,
+  `COD_CRIADOR` VARCHAR(3) NULL DEFAULT NULL,
+  `COD_RACA` VARCHAR(3) NULL DEFAULT NULL,
+  `COD_LOCAL` VARCHAR(3) NULL DEFAULT NULL,
+  `DATA_COMPRA` VARCHAR(10) NULL DEFAULT NULL,
+  `VALOR_ANIMAL` DOUBLE NULL DEFAULT NULL,
+  `NATA_FISCAL` VARCHAR(20) NULL DEFAULT NULL,
+  `GTA` VARCHAR(15) NULL DEFAULT NULL,
+  `NUMERO_ANIMAL` VARCHAR(7) NULL DEFAULT NULL,
+  `SEXO` CHAR(1) NULL DEFAULT NULL,
+  `DATA_NASCIMENTO` VARCHAR(10) NULL DEFAULT NULL,
+  `SITUACAO` VARCHAR(50) NULL DEFAULT NULL,
+  `NOME_ANIMAL` VARCHAR(50) NULL DEFAULT NULL,
+  `GRAU_SANGUE` VARCHAR(20) NULL DEFAULT NULL,
+  `PESO` DOUBLE NULL DEFAULT NULL,
+  `DESTINACAO` VARCHAR(50) NULL DEFAULT NULL,
+  `GRUPO` VARCHAR(50) NULL DEFAULT NULL,
+  `VENDEDOR` VARCHAR(50) NULL DEFAULT NULL,
+  `CHIPE` VARCHAR(10) NULL DEFAULT NULL,
+  `PELAGEM` VARCHAR(50) NULL DEFAULT NULL,
+  `RGN` VARCHAR(15) NULL DEFAULT NULL,
+  `RGD` VARCHAR(15) NULL DEFAULT NULL,
+  `BRINCO` VARCHAR(7) NULL DEFAULT NULL,
+  `OBS` VARCHAR(100) NULL DEFAULT NULL,
+  PRIMARY KEY (`COD_COMPRA`),
+  INDEX `FK_COMPRA_REFERENCE_LOCAL` (`COD_LOCAL` ASC),
+  INDEX `FK_COMPRA_REFERENCE_RACA` (`COD_RACA` ASC),
+  INDEX `FK_COMPRA_REFERENCE_CRIADOR` (`COD_CRIADOR` ASC),
+  CONSTRAINT `FK_COMPRA_REFERENCE_CRIADOR`
+    FOREIGN KEY (`COD_CRIADOR`)
+    REFERENCES `berromysql`.`criador` (`COD_CRIADOR`),
+  CONSTRAINT `FK_COMPRA_REFERENCE_LOCAL`
+    FOREIGN KEY (`COD_LOCAL`)
+    REFERENCES `berromysql`.`local1` (`COD_LOCAL`),
+  CONSTRAINT `FK_COMPRA_REFERENCE_RACA`
+    FOREIGN KEY (`COD_RACA`)
+    REFERENCES `berromysql`.`raca` (`COD_RACA`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `berromysql`.`parto_registro_cria`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `berromysql`.`parto_registro_cria` (
+  `COD_CRIA` VARCHAR(7) NOT NULL,
+  `NOME_CRIA` VARCHAR(50) NULL DEFAULT NULL,
+  `SEXO_CRIA` CHAR(1) NULL DEFAULT NULL,
+  `COD_RACA` VARCHAR(3) NULL DEFAULT NULL,
+  `PESO` DOUBLE NULL DEFAULT NULL,
+  `OBS` VARCHAR(50) NULL DEFAULT NULL,
+  PRIMARY KEY (`COD_CRIA`),
+  INDEX `FK_PARTO_RE_REFERENCE_RACA` (`COD_RACA` ASC),
+  CONSTRAINT `FK_PARTO_RE_REFERENCE_RACA`
+    FOREIGN KEY (`COD_RACA`)
+    REFERENCES `berromysql`.`raca` (`COD_RACA`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `berromysql`.`desmama`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `berromysql`.`desmama` (
+  `COD_CRIA_DEFINITIVO` VARCHAR(7) NOT NULL,
+  `COD_CRIA` VARCHAR(7) NULL DEFAULT NULL,
+  `DATA_DESMAMA` VARCHAR(10) NULL DEFAULT NULL,
+  `DESTINACAO` VARCHAR(30) NULL DEFAULT NULL,
+  `PESO_DESMAMA` DOUBLE NULL DEFAULT NULL,
+  `COD_LOCAL` VARCHAR(3) NULL DEFAULT NULL,
+  `OBS` VARCHAR(50) NULL DEFAULT NULL,
+  PRIMARY KEY (`COD_CRIA_DEFINITIVO`),
+  INDEX `FK_DESMAMA_REFERENCE_PARTO_RE` (`COD_CRIA` ASC),
+  INDEX `FK_DESMAMA_REFERENCE_LOCAL` (`COD_LOCAL` ASC),
+  CONSTRAINT `FK_DESMAMA_REFERENCE_LOCAL`
+    FOREIGN KEY (`COD_LOCAL`)
+    REFERENCES `berromysql`.`local1` (`COD_LOCAL`),
+  CONSTRAINT `FK_DESMAMA_REFERENCE_PARTO_RE`
+    FOREIGN KEY (`COD_CRIA`)
+    REFERENCES `berromysql`.`parto_registro_cria` (`COD_CRIA`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `berromysql`.`diagnostico`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `berromysql`.`diagnostico` (
+  `COD_DIAGNOSTICO` INT(11) NOT NULL AUTO_INCREMENT,
+  `COD_ANIMAL` VARCHAR(7) NULL DEFAULT NULL,
+  `DATA_DIAGNOSTICO` VARCHAR(10) NULL DEFAULT NULL,
+  `RESULTADO` VARCHAR(10) NULL DEFAULT NULL,
+  `OBS` VARCHAR(50) NULL DEFAULT NULL,
+  PRIMARY KEY (`COD_DIAGNOSTICO`),
+  INDEX `FK_DIAGNOST_REFERENCE_ANIMAL` (`COD_ANIMAL` ASC),
+  CONSTRAINT `FK_DIAGNOST_REFERENCE_ANIMAL`
+    FOREIGN KEY (`COD_ANIMAL`)
+    REFERENCES `berromysql`.`animal` (`COD_ANIMAL`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `berromysql`.`evento_sanitario_zootecnico`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `berromysql`.`evento_sanitario_zootecnico` (
+  `COD_SANI_ZOO` INT(11) NOT NULL AUTO_INCREMENT,
+  `NOME_SANI_ZOO` VARCHAR(50) NULL DEFAULT NULL,
+  PRIMARY KEY (`COD_SANI_ZOO`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `berromysql`.`evento_sanitario`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `berromysql`.`evento_sanitario` (
+  `COD_EVENTO_SANITARIO` INT(11) NOT NULL AUTO_INCREMENT,
+  `COD_ANIMAL` VARCHAR(7) NULL DEFAULT NULL,
+  `COD_SANI_ZOO` INT(11) NULL DEFAULT NULL,
+  `QTD` DOUBLE NULL DEFAULT NULL,
+  `DOSES` VARCHAR(10) NULL DEFAULT NULL,
+  `OBS` VARCHAR(100) NULL DEFAULT NULL,
+  `SCORE` VARCHAR(10) NULL DEFAULT NULL,
+  `NOTA_FISCAL` VARCHAR(30) NULL DEFAULT NULL,
+  `LABORATORIO` VARCHAR(50) NULL DEFAULT NULL,
+  `VALOR` DOUBLE NULL DEFAULT NULL,
+  `ALERTA` VARCHAR(10) NULL DEFAULT NULL,
+  PRIMARY KEY (`COD_EVENTO_SANITARIO`),
+  INDEX `FK_EVENTO_S_REFERENCE_ANIMAL` (`COD_ANIMAL` ASC),
+  INDEX `FK_EVENTO_S_REFERENCE_EVENTO_S` (`COD_SANI_ZOO` ASC),
+  CONSTRAINT `FK_EVENTO_S_REFERENCE_ANIMAL`
+    FOREIGN KEY (`COD_ANIMAL`)
+    REFERENCES `berromysql`.`animal` (`COD_ANIMAL`),
+  CONSTRAINT `FK_EVENTO_S_REFERENCE_EVENTO_S`
+    FOREIGN KEY (`COD_SANI_ZOO`)
+    REFERENCES `berromysql`.`evento_sanitario_zootecnico` (`COD_SANI_ZOO`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `berromysql`.`funcionarios`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `berromysql`.`funcionarios` (
+  `idfuncionarios` INT(11) NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(100) NULL DEFAULT NULL,
+  `data_admicao` VARCHAR(15) NULL DEFAULT NULL,
+  `salario` DOUBLE NULL DEFAULT NULL,
+  `cargo` VARCHAR(50) NULL DEFAULT NULL,
+  `fone` VARCHAR(20) NULL DEFAULT NULL,
+  PRIMARY KEY (`idfuncionarios`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `berromysql`.`unidade`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `berromysql`.`unidade` (
+  `cod_unidade` INT(11) NOT NULL AUTO_INCREMENT,
+  `nome_unidade` VARCHAR(150) NOT NULL,
+  `flag` CHAR(1) NOT NULL,
+  PRIMARY KEY (`cod_unidade`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 5
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `berromysql`.`medicamentos`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `berromysql`.`medicamentos` (
+  `COD_MEDICAMENTO` INT(11) NOT NULL AUTO_INCREMENT,
+  `COD_BARRAS` VARCHAR(20) NULL DEFAULT NULL,
+  `NOME_COMERCIAL` VARCHAR(50) NOT NULL,
+  `PRINCIPIO_ATIVO` VARCHAR(50) NULL DEFAULT NULL,
+  `INDICACOES` TEXT NULL DEFAULT NULL,
+  `PRECO_COMPRA` FLOAT NULL DEFAULT NULL,
+  `QUANTIDADE_POR_EMBALAGEM` INT(11) NULL DEFAULT NULL,
+  `QUANTIDADE_DE_EMBALAGEM` INT(11) NULL DEFAULT NULL,
+  `QUANTIDADE_MIN` INT(11) NULL DEFAULT NULL,
+  `DATA_VALIDADE` VARCHAR(10) NOT NULL,
+  `APRESENTACAO` VARCHAR(100) NOT NULL,
+  `LABORATORIO` VARCHAR(150) NULL DEFAULT NULL,
+  `MODO_USO` TEXT NULL DEFAULT NULL,
+  `OBS` TEXT NULL DEFAULT NULL,
+  `COD_CATEGORIA` INT(11) NOT NULL,
+  `COD_UNIDADE` INT(11) NOT NULL,
+  `caminho_foto` VARCHAR(200) NULL DEFAULT NULL,
+  `foto` LONGBLOB NULL DEFAULT NULL,
+  PRIMARY KEY (`COD_MEDICAMENTO`),
+  INDEX `COD_CATEGORIA_FK` (`COD_CATEGORIA` ASC),
+  INDEX `COD_UNIDADE_FK` (`COD_UNIDADE` ASC),
+  CONSTRAINT `COD_CATEGORIA_FK`
+    FOREIGN KEY (`COD_CATEGORIA`)
+    REFERENCES `berromysql`.`categoria` (`cod_categoria`)
+    ON DELETE NO ACTION,
+  CONSTRAINT `COD_UNIDADE_FK`
+    FOREIGN KEY (`COD_UNIDADE`)
+    REFERENCES `berromysql`.`unidade` (`cod_unidade`)
+    ON DELETE NO ACTION)
+ENGINE = InnoDB
+AUTO_INCREMENT = 7
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `berromysql`.`parto`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `berromysql`.`parto` (
+  `CO` INT(11) NOT NULL AUTO_INCREMENT,
+  `COD_ANIMAL` VARCHAR(7) NULL DEFAULT NULL,
+  `DATA_PARTO` VARCHAR(10) NULL DEFAULT NULL,
+  `NUM_CRIAS` INT(11) NULL DEFAULT NULL,
+  `NUM_NATIMORTOS` INT(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`CO`),
+  INDEX `FK_PARTO_REFERENCE_ANIMAL` (`COD_ANIMAL` ASC),
+  CONSTRAINT `FK_PARTO_REFERENCE_ANIMAL`
+    FOREIGN KEY (`COD_ANIMAL`)
+    REFERENCES `berromysql`.`animal` (`COD_ANIMAL`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `berromysql`.`pesagem`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `berromysql`.`pesagem` (
+  `COD_PESAGEM` INT(11) NOT NULL AUTO_INCREMENT,
+  `COD_ANIMAL` VARCHAR(7) NULL DEFAULT NULL,
+  `DATA_PESAGEM` VARCHAR(10) NULL DEFAULT NULL,
+  `PESO_ATUAL` DOUBLE NULL DEFAULT NULL,
+  PRIMARY KEY (`COD_PESAGEM`),
+  INDEX `FK_PESAGEM_REFERENCE_ANIMAL` (`COD_ANIMAL` ASC),
+  CONSTRAINT `FK_PESAGEM_REFERENCE_ANIMAL`
+    FOREIGN KEY (`COD_ANIMAL`)
+    REFERENCES `berromysql`.`animal` (`COD_ANIMAL`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `berromysql`.`premiacao`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `berromysql`.`premiacao` (
+  `COD_PREMIACAO` INT(11) NOT NULL AUTO_INCREMENT,
+  `COD_ANIMAL` VARCHAR(7) NULL DEFAULT NULL,
+  `DATA_PREMIACAO` VARCHAR(10) NULL DEFAULT NULL,
+  `TITULO` VARCHAR(40) NULL DEFAULT NULL,
+  `LOCAL12` VARCHAR(50) NULL DEFAULT NULL,
+  PRIMARY KEY (`COD_PREMIACAO`),
+  INDEX `FK_PREMIACA_REFERENCE_ANIMAL` (`COD_ANIMAL` ASC),
+  CONSTRAINT `FK_PREMIACA_REFERENCE_ANIMAL`
+    FOREIGN KEY (`COD_ANIMAL`)
+    REFERENCES `berromysql`.`animal` (`COD_ANIMAL`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `berromysql`.`usuarios`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `berromysql`.`usuarios` (
+  `idusuarios` INT(11) NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(100) NULL DEFAULT NULL,
+  `permissao` VARCHAR(80) NULL DEFAULT NULL,
+  `login` VARCHAR(100) NULL DEFAULT NULL,
+  `senha` VARCHAR(10) NULL DEFAULT NULL,
+  PRIMARY KEY (`idusuarios`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `berromysql`.`venda_animal`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `berromysql`.`venda_animal` (
+  `COD_VENDA` INT(11) NOT NULL AUTO_INCREMENT,
+  `COD_ANIMAL` VARCHAR(7) NULL DEFAULT NULL,
+  `DATA_VENDA` VARCHAR(10) NULL DEFAULT NULL,
+  `VALOR_KG` DOUBLE NULL DEFAULT NULL,
+  `PESO_ANIMAL` DOUBLE NULL DEFAULT NULL,
+  `VALOR_TOTAL` DOUBLE NULL DEFAULT NULL,
+  `COMPRADOR` VARCHAR(50) NULL DEFAULT NULL,
+  `NOTA_FISCAL` VARCHAR(20) NULL DEFAULT NULL,
+  `GTA` VARCHAR(10) NULL DEFAULT NULL,
+  `OBS` VARCHAR(50) NULL DEFAULT NULL,
+  PRIMARY KEY (`COD_VENDA`),
+  INDEX `FK_VENDA_AN_REFERENCE_ANIMAL` (`COD_ANIMAL` ASC),
+  CONSTRAINT `FK_VENDA_AN_REFERENCE_ANIMAL`
+    FOREIGN KEY (`COD_ANIMAL`)
+    REFERENCES `berromysql`.`animal` (`COD_ANIMAL`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

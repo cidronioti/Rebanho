@@ -28,6 +28,7 @@ namespace Rebanho
         {
             preencheComboCategoria();
             preencheComboUnidade();
+            preenchertabela();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -104,7 +105,6 @@ namespace Rebanho
             mm.PrincipioAtivo = txtPrincipioAtivo.Text;
             mm.Validade = maskValidade.Text;
             mm.CodCategoria = cc.retornaCodCategoria(cbCategoria.Text);
-            Console.WriteLine("CODIGO CATEGORIa: "+ cc.retornaCodCategoria(cbCategoria.Text));
             mm.Apresentacao = txtApresentacao.Text;
             mm.QuantidadePorEmbalagem = int.Parse(txtQtdPorEmbalagem.Text);
             mm.QuantidadeDeEmbalagem = int.Parse(txtQtdEmbalagens.Text);
@@ -146,5 +146,18 @@ namespace Rebanho
             return false;
         }
 
+        public void preenchertabela()
+        {
+            try
+            {
+                metroGrid1.DataSource = mc.preencheTabela();
+                lblNumeroRegistros.Text = (metroGrid1.RowCount - 1).ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao preencher tabela - " + ex);
+            }
+
+        }
     }
 }

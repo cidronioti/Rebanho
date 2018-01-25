@@ -143,6 +143,16 @@ namespace Rebanho.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _676___Sheep_128 {
+            get {
+                object obj = ResourceManager.GetObject("676_-_Sheep-128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap acrobat {
             get {
                 object obj = ResourceManager.GetObject("acrobat", resourceCulture);

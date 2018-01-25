@@ -80,5 +80,23 @@ namespace Control
             }
         }
 
+        public DataTable preencheTabela()
+        {
+            try
+            {
+                conexao = new MySqlConnection(caminho);
+                comando = new MySqlCommand("SELECT  cod_barras, nome_comercial FROM medicamentos", conexao);
+                MySqlDataAdapter mda = new MySqlDataAdapter();
+                mda.SelectCommand = comando;
+                DataTable dt = new DataTable();
+                mda.Fill(dt);
+                return dt;
+            }
+            catch (MySqlException ex)
+            {
+                throw new Exception("Erro - " + ex);
+            }
+        }
+
     }
 }

@@ -10,3 +10,4 @@ C:\Users\Manoel\Desktop\Rebanho\DALL\bin\Debug\DALL.dll
 C:\Users\Manoel\Desktop\Rebanho\DALL\bin\Debug\DALL.pdb
 C:\Users\Manoel\Desktop\Rebanho\DALL\obj\Debug\DALL.dll
 C:\Users\Manoel\Desktop\Rebanho\DALL\obj\Debug\DALL.pdb
+C:\Users\Manoel\Desktop\Rebanho\DALL\obj\Debug\Modelo.csprojResolveAssemblyReference.cache

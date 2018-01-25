@@ -119,8 +119,6 @@ namespace Control
                 throw new Exception("Erro - " + ex);
             }
             conexao.Close();
-            Console.WriteLine("NOME CATEGORIA 2: " + nome);
-            Console.WriteLine("CODIGO CATEGORIA 2: "+codigoCat);
             return codigoCat;
         }
     }
