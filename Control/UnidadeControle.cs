@@ -121,5 +121,27 @@ namespace Control
             conexao.Close();
             return codigoUni;
         }
+
+        public string retornaNomeUnidade(int cod)
+        {
+            string nomeUni = null;
+            try
+            {
+                conexao = new MySqlConnection(caminho);
+                conexao.Open();
+                comando = new MySqlCommand("SELECT nome_unidade FROM unidade WHERE cod_unidade = '" + cod + "'", conexao);
+                MySqlDataReader leitor = comando.ExecuteReader();
+                while (leitor.Read())
+                {
+                    nomeUni = leitor["nome_Unidade"].ToString();
+                }
+            }
+            catch (MySqlException ex)
+            {
+                throw new Exception("Erro - " + ex);
+            }
+            conexao.Close();
+            return nomeUni;
+        }
     }
 }

@@ -267,5 +267,10 @@ namespace Rebanho
                 MessageBox.Show("Erro ao excluir cliente", "Rebanho 1.0.0", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void txtBusca_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

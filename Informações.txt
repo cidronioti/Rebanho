@@ -1,0 +1,10 @@
+---------ANOTAÇÕES----------
+
+> FORMULÁRIO DE CADASTRO DE CLIENTES: 
+  - Erro ao deletar, deleta o cliente
+    mas não o endereço.
+
+
+> FORMULARIO DE CADASTRO DE MEDICAMENTOS:
+   - Erro ao busca, consegue trazer todos
+     os dados exceto a foto.

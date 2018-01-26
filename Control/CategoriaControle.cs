@@ -121,5 +121,27 @@ namespace Control
             conexao.Close();
             return codigoCat;
         }
+
+        public string retornaNomeCategoria(int cod)
+        {
+            string nomeCat = null;
+            try
+            {
+                conexao = new MySqlConnection(caminho);
+                conexao.Open();
+                comando = new MySqlCommand("SELECT nome_categoria FROM categoria WHERE cod_categoria = '" + cod + "'", conexao);
+                MySqlDataReader leitor = comando.ExecuteReader();
+                while (leitor.Read())
+                {
+                    nomeCat = leitor["nome_categoria"].ToString();
+                }
+            }
+            catch (MySqlException ex)
+            {
+                throw new Exception("Erro - " + ex);
+            }
+            conexao.Close();
+            return nomeCat;
+        }
     }
 }

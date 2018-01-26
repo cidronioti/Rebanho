@@ -29,6 +29,8 @@ namespace Rebanho
             preencheComboCategoria();
             preencheComboUnidade();
             preenchertabela();
+            cbCategoria.Text = "";
+            cbUnidade.Text = "";
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -53,12 +55,12 @@ namespace Rebanho
 
         private void limpaCampos()
         {
-            TextBox[] tb = {txtCodBarras, txtNomeComercial, txtPrincipioAtivo, txtApresentacao, txtQtdPorEmbalagem, txtQtdEmbalagens, txtQtdMin, txtPrecoCompra, txtLaboratorio, txtIndicacao, txtModoUso, txtObs, txtCaminhoFoto };
+            TextBox[] tb = {txtCod, txtCodBarras, txtNomeComercial, txtPrincipioAtivo, txtApresentacao, txtQtdPorEmbalagem, txtQtdEmbalagens, txtQtdMin, txtPrecoCompra, txtLaboratorio, txtIndicacao, txtModoUso, txtObs, txtCaminhoFoto };
             for (int i = 0; i < tb.Length; i++)
             {
                 tb[i].Text = "";
             }
-            maskValidade.Text = "";
+            dtPicker.Text = "";
             cbCategoria.Text = "";
             cbUnidade.Text = "";
         }
@@ -103,7 +105,7 @@ namespace Rebanho
             mm.CodBarras = txtCodBarras.Text;
             mm.NomeComercial = txtNomeComercial.Text;
             mm.PrincipioAtivo = txtPrincipioAtivo.Text;
-            mm.Validade = maskValidade.Text;
+            mm.Validade = dtPicker.Text;
             mm.CodCategoria = cc.retornaCodCategoria(cbCategoria.Text);
             mm.Apresentacao = txtApresentacao.Text;
             mm.QuantidadePorEmbalagem = int.Parse(txtQtdPorEmbalagem.Text);
@@ -139,6 +141,9 @@ namespace Rebanho
             {
                 txtNomeComercial.BackColor = Color.Tomato;
                 txtCodBarras.BackColor = Color.Tomato;
+                dtPicker.BackColor = Color.Tomato;
+                cbCategoria.BackColor = Color.Tomato;
+                cbUnidade.BackColor = Color.Tomato;
                 return true;
             }
 
@@ -158,6 +163,81 @@ namespace Rebanho
                 MessageBox.Show("Erro ao preencher tabela - " + ex);
             }
 
+        }
+
+        public void preencherTabela2()
+        {
+            try
+            {
+                metroGrid1.DataSource = mc.preencheTabelaBuscaComParametro(txtBusca.Text);
+                lblNumeroRegistros.Text = (metroGrid1.RowCount - 1).ToString();
+            }
+            catch (Exception ex) { MessageBox.Show("Erro - "+ex, "Rebanho 1.0.0", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)44 || e.KeyChar == (char)46 || e.KeyChar == (char)45)
+            {
+                e.Handled = true;
+            }
+
+            if (!String.IsNullOrEmpty(txtBusca.Text))
+            {
+                preencherTabela2();
+            }
+            else
+                preenchertabela();
+        }
+
+        private void metroGrid1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.ColumnIndex > 0)
+            {
+                mm = mc.buscaPorCodigo((int) metroGrid1.CurrentRow.Cells[0].Value);
+                txtCod.Text = mm.Cod.ToString();
+                txtCodBarras.Text = mm.CodBarras.ToString();
+                txtNomeComercial.Text = mm.NomeComercial;
+                txtPrincipioAtivo.Text = mm.PrincipioAtivo;
+                dtPicker.Text = mm.Validade;
+                cbCategoria.Text = cc.retornaNomeCategoria(mm.CodCategoria);
+                txtApresentacao.Text = mm.Apresentacao;
+                txtQtdPorEmbalagem.Text = mm.QuantidadePorEmbalagem.ToString();
+                txtQtdEmbalagens.Text = mm.QuantidadeDeEmbalagem.ToString();
+                cbUnidade.Text = uc.retornaNomeUnidade(mm.CodUnidade);
+                txtQtdMin.Text = mm.QuantidadeMin.ToString();
+                txtPrecoCompra.Text = mm.PrecoCompra.ToString();
+                txtLaboratorio.Text = mm.Laboratorio;
+                txtIndicacao.Text = mm.Indicacoes;
+                txtModoUso.Text = mm.ModoUso;
+                txtObs.Text = mm.Obs;
+                txtCaminhoFoto.Text = mm.CaminhoFoto;
+
+                if (mm.Foto == null)
+                {
+                    pictureBox2.Image = null;
+                }else
+                {
+                    MemoryStream ms = new MemoryStream(mm.Foto);
+                    //pictureBox2.Image = System.Drawing.Image.FromStream(ms);
+                }
+
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(txtCod.Text))
+            {
+                var dialogResult = MessageBox.Show("Deseja excluir estes dados?", "Rebanho 1.0.0", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    mc.deletarMedicamento(int.Parse(txtCod.Text));
+                    limpaCampos();
+                }
+            }else
+                MessageBox.Show("Selecione o medicamento a ser excluído", "Rebanho 1.0.0", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }
