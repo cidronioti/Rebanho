@@ -8,3 +8,4 @@
 > FORMULARIO DE CADASTRO DE MEDICAMENTOS:
    - Erro ao busca, consegue trazer todos
      os dados exceto a foto.
+   - Erro ao atualizar problemas com a foto

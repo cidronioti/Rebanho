@@ -60,7 +60,8 @@ namespace Rebanho
             {
                 tb[i].Text = "";
             }
-            dtPicker.Text = "";
+            pictureBox2.Image = null;
+            maskValidade.Text = "";
             cbCategoria.Text = "";
             cbUnidade.Text = "";
         }
@@ -105,7 +106,7 @@ namespace Rebanho
             mm.CodBarras = txtCodBarras.Text;
             mm.NomeComercial = txtNomeComercial.Text;
             mm.PrincipioAtivo = txtPrincipioAtivo.Text;
-            mm.Validade = dtPicker.Text;
+            mm.Validade = maskValidade.Text;
             mm.CodCategoria = cc.retornaCodCategoria(cbCategoria.Text);
             mm.Apresentacao = txtApresentacao.Text;
             mm.QuantidadePorEmbalagem = int.Parse(txtQtdPorEmbalagem.Text);
@@ -129,6 +130,7 @@ namespace Rebanho
                 salvar();
                 MessageBox.Show("Salvo com sucesso", "Rebanho 1.0.0", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 limpaCampos();
+                preenchertabela();
             }
             else
                 MessageBox.Show("Preencha os campos obrigatórios", "Rebanho 1.0.0", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -141,7 +143,7 @@ namespace Rebanho
             {
                 txtNomeComercial.BackColor = Color.Tomato;
                 txtCodBarras.BackColor = Color.Tomato;
-                dtPicker.BackColor = Color.Tomato;
+                maskValidade.BackColor = Color.Tomato;
                 cbCategoria.BackColor = Color.Tomato;
                 cbUnidade.BackColor = Color.Tomato;
                 return true;
@@ -199,7 +201,7 @@ namespace Rebanho
                 txtCodBarras.Text = mm.CodBarras.ToString();
                 txtNomeComercial.Text = mm.NomeComercial;
                 txtPrincipioAtivo.Text = mm.PrincipioAtivo;
-                dtPicker.Text = mm.Validade;
+                maskValidade.Text = mm.Validade;
                 cbCategoria.Text = cc.retornaNomeCategoria(mm.CodCategoria);
                 txtApresentacao.Text = mm.Apresentacao;
                 txtQtdPorEmbalagem.Text = mm.QuantidadePorEmbalagem.ToString();
@@ -235,9 +237,56 @@ namespace Rebanho
                 {
                     mc.deletarMedicamento(int.Parse(txtCod.Text));
                     limpaCampos();
+                    preenchertabela();
                 }
             }else
                 MessageBox.Show("Selecione o medicamento a ser excluído", "Rebanho 1.0.0", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (txtCod.Text == "")
+            {
+                MessageBox.Show("Selecione um registro para ser atualizado");
+            }
+            else
+            {
+                mm.Cod = int.Parse(txtCod.Text);
+                mm.CodBarras = txtCodBarras.Text;
+                mm.NomeComercial = txtNomeComercial.Text;
+                mm.PrincipioAtivo = txtPrincipioAtivo.Text;
+                mm.Validade = maskValidade.Text;
+                mm.CodCategoria = cc.retornaCodCategoria(cbCategoria.Text);
+                mm.Apresentacao = txtApresentacao.Text;
+                mm.QuantidadePorEmbalagem = int.Parse(txtQtdPorEmbalagem.Text);
+                mm.QuantidadeDeEmbalagem = int.Parse(txtQtdEmbalagens.Text);
+                mm.CodUnidade = uc.retornaCodUnidade(cbUnidade.Text);
+                mm.QuantidadeMin = int.Parse(txtQtdMin.Text);
+                mm.PrecoCompra = double.Parse(txtPrecoCompra.Text);
+                mm.Laboratorio = txtLaboratorio.Text;
+                mm.Indicacoes = txtIndicacao.Text;
+                mm.ModoUso = txtModoUso.Text;
+                mm.Obs = txtObs.Text;
+                mm.CaminhoFoto = txtCaminhoFoto.Text;
+
+                byte[] imagem = null;
+                FileStream fs = new FileStream(txtCaminhoFoto.Text, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs);
+                imagem = br.ReadBytes((int)fs.Length);
+                if (imagem != null)
+                {
+                    mm.Foto = imagem;
+                }
+                mc.atualizaMedicamento(mm);
+                MessageBox.Show("Atualizado com sucesso ");
+                limpaCampos();
+                preenchertabela();
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Dispose();
         }
     }
 }

@@ -37,6 +37,24 @@ namespace Control
             }
         }
 
+        public void atualizaMedicamento(MedicamentoModelo m)
+        {
+            try
+            {
+                conexao = new MySqlConnection(caminho);
+                conexao.Open();
+                string atualiza = "UPDATE medicamentos SET cod_barras='" + m.CodBarras + "',nome_comercial='" + m.NomeComercial + "',principio_ativo='" + m.PrincipioAtivo + "',data_validade='" + m.Validade + "',cod_categoria='" + m.CodCategoria + "',apresentacao='" + m.Apresentacao + "',quantidade_por_embalagem='" + m.QuantidadePorEmbalagem + "',quantidade_de_embalagem='" + m.QuantidadeDeEmbalagem + "',cod_unidade='" + m.CodUnidade + "',quantidade_min='" + m.QuantidadeMin + "',preco_compra='" + m.PrecoCompra + "',laboratorio='" + m.Laboratorio + "',indicacoes='" + m.Indicacoes + "',modo_uso='" + m.ModoUso + "',obs='" + m.Obs + "',caminho_foto='" + m.CaminhoFoto + "',foto='" + m.Foto + "' WHERE COD_RACA='" + m.Cod + "'";
+                comando = new MySqlCommand(atualiza, conexao);
+                comando.ExecuteNonQuery();
+                conexao.Close();
+
+            }
+            catch (MySqlException ex)
+            {
+                throw new Exception("Erro - " + ex);
+            }
+        }
+
         public void deletarMedicamento(int parametro)
         {
             try

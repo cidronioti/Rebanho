@@ -32,24 +32,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtGraminea = new System.Windows.Forms.TextBox();
+            this.txtObs = new System.Windows.Forms.TextBox();
+            this.txtConsumo = new System.Windows.Forms.TextBox();
+            this.txtPastejo = new System.Windows.Forms.TextBox();
+            this.txtPerda = new System.Windows.Forms.TextBox();
+            this.txtSuporte = new System.Windows.Forms.TextBox();
+            this.txtArea = new System.Windows.Forms.TextBox();
+            this.txtCod = new System.Windows.Forms.TextBox();
             this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
@@ -63,6 +57,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.maskDataAvaliacao = new System.Windows.Forms.MaskedTextBox();
+            this.txtDescanso = new System.Windows.Forms.TextBox();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -83,8 +80,6 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.metroGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -107,16 +102,11 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.metroGrid1.RowHeadersVisible = false;
             this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.metroGrid1.Size = new System.Drawing.Size(241, 301);
             this.metroGrid1.TabIndex = 16;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Nome";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 200;
             // 
             // metroLabel1
             // 
@@ -131,21 +121,19 @@
             // metroPanel1
             // 
             this.metroPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.metroPanel1.Controls.Add(this.textBox2);
-            this.metroPanel1.Controls.Add(this.textBox4);
-            this.metroPanel1.Controls.Add(this.textBox7);
-            this.metroPanel1.Controls.Add(this.textBox6);
-            this.metroPanel1.Controls.Add(this.textBox12);
-            this.metroPanel1.Controls.Add(this.textBox11);
-            this.metroPanel1.Controls.Add(this.textBox10);
-            this.metroPanel1.Controls.Add(this.textBox9);
-            this.metroPanel1.Controls.Add(this.textBox8);
-            this.metroPanel1.Controls.Add(this.textBox5);
-            this.metroPanel1.Controls.Add(this.textBox3);
-            this.metroPanel1.Controls.Add(this.textBox1);
-            this.metroPanel1.Controls.Add(this.metroLabel8);
-            this.metroPanel1.Controls.Add(this.metroLabel12);
+            this.metroPanel1.Controls.Add(this.txtDescanso);
             this.metroPanel1.Controls.Add(this.metroLabel7);
+            this.metroPanel1.Controls.Add(this.maskDataAvaliacao);
+            this.metroPanel1.Controls.Add(this.txtNome);
+            this.metroPanel1.Controls.Add(this.txtGraminea);
+            this.metroPanel1.Controls.Add(this.txtObs);
+            this.metroPanel1.Controls.Add(this.txtConsumo);
+            this.metroPanel1.Controls.Add(this.txtPastejo);
+            this.metroPanel1.Controls.Add(this.txtPerda);
+            this.metroPanel1.Controls.Add(this.txtSuporte);
+            this.metroPanel1.Controls.Add(this.txtArea);
+            this.metroPanel1.Controls.Add(this.txtCod);
+            this.metroPanel1.Controls.Add(this.metroLabel12);
             this.metroPanel1.Controls.Add(this.metroLabel11);
             this.metroPanel1.Controls.Add(this.metroLabel10);
             this.metroPanel1.Controls.Add(this.metroLabel13);
@@ -166,144 +154,102 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // textBox2
+            // txtNome
             // 
-            this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox2.Location = new System.Drawing.Point(88, 23);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(227, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtNome.Location = new System.Drawing.Point(88, 23);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(227, 20);
+            this.txtNome.TabIndex = 1;
             // 
-            // textBox4
+            // txtGraminea
             // 
-            this.textBox4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox4.Location = new System.Drawing.Point(88, 70);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(227, 20);
-            this.textBox4.TabIndex = 3;
+            this.txtGraminea.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtGraminea.Location = new System.Drawing.Point(88, 70);
+            this.txtGraminea.Name = "txtGraminea";
+            this.txtGraminea.Size = new System.Drawing.Size(227, 20);
+            this.txtGraminea.TabIndex = 3;
             // 
-            // textBox7
+            // txtObs
             // 
-            this.textBox7.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox7.Location = new System.Drawing.Point(208, 116);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(107, 20);
-            this.textBox7.TabIndex = 6;
+            this.txtObs.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtObs.Location = new System.Drawing.Point(7, 209);
+            this.txtObs.Name = "txtObs";
+            this.txtObs.Size = new System.Drawing.Size(308, 20);
+            this.txtObs.TabIndex = 11;
             // 
-            // textBox6
+            // txtConsumo
             // 
-            this.textBox6.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox6.Location = new System.Drawing.Point(105, 116);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(97, 20);
-            this.textBox6.TabIndex = 5;
+            this.txtConsumo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtConsumo.Location = new System.Drawing.Point(105, 162);
+            this.txtConsumo.Name = "txtConsumo";
+            this.txtConsumo.Size = new System.Drawing.Size(110, 20);
+            this.txtConsumo.TabIndex = 10;
             // 
-            // textBox12
+            // txtPastejo
             // 
-            this.textBox12.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox12.Location = new System.Drawing.Point(7, 209);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(308, 20);
-            this.textBox12.TabIndex = 11;
+            this.txtPastejo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtPastejo.Location = new System.Drawing.Point(7, 162);
+            this.txtPastejo.Name = "txtPastejo";
+            this.txtPastejo.Size = new System.Drawing.Size(92, 20);
+            this.txtPastejo.TabIndex = 9;
             // 
-            // textBox11
+            // txtPerda
             // 
-            this.textBox11.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox11.Location = new System.Drawing.Point(203, 162);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(112, 20);
-            this.textBox11.TabIndex = 10;
+            this.txtPerda.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtPerda.Location = new System.Drawing.Point(221, 117);
+            this.txtPerda.Name = "txtPerda";
+            this.txtPerda.Size = new System.Drawing.Size(94, 20);
+            this.txtPerda.TabIndex = 8;
             // 
-            // textBox10
+            // txtSuporte
             // 
-            this.textBox10.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox10.Location = new System.Drawing.Point(136, 162);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(59, 20);
-            this.textBox10.TabIndex = 9;
+            this.txtSuporte.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtSuporte.Location = new System.Drawing.Point(105, 117);
+            this.txtSuporte.Name = "txtSuporte";
+            this.txtSuporte.Size = new System.Drawing.Size(110, 20);
+            this.txtSuporte.TabIndex = 7;
             // 
-            // textBox9
+            // txtArea
             // 
-            this.textBox9.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox9.Location = new System.Drawing.Point(71, 162);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(59, 20);
-            this.textBox9.TabIndex = 8;
+            this.txtArea.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtArea.Location = new System.Drawing.Point(7, 70);
+            this.txtArea.Name = "txtArea";
+            this.txtArea.Size = new System.Drawing.Size(75, 20);
+            this.txtArea.TabIndex = 2;
             // 
-            // textBox8
+            // txtCod
             // 
-            this.textBox8.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox8.Location = new System.Drawing.Point(7, 162);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(58, 20);
-            this.textBox8.TabIndex = 7;
-            // 
-            // textBox5
-            // 
-            this.textBox5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox5.Location = new System.Drawing.Point(7, 116);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(92, 20);
-            this.textBox5.TabIndex = 4;
-            // 
-            // textBox3
-            // 
-            this.textBox3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox3.Location = new System.Drawing.Point(7, 70);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(75, 20);
-            this.textBox3.TabIndex = 2;
-            // 
-            // textBox1
-            // 
-            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox1.Location = new System.Drawing.Point(7, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(75, 20);
-            this.textBox1.TabIndex = 0;
-            // 
-            // metroLabel8
-            // 
-            this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(205, 94);
-            this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(98, 19);
-            this.metroLabel8.TabIndex = 1;
-            this.metroLabel8.Text = "Padrão Pastejo";
+            this.txtCod.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtCod.Location = new System.Drawing.Point(7, 23);
+            this.txtCod.Name = "txtCod";
+            this.txtCod.Size = new System.Drawing.Size(75, 20);
+            this.txtCod.TabIndex = 0;
             // 
             // metroLabel12
             // 
             this.metroLabel12.AutoSize = true;
-            this.metroLabel12.Location = new System.Drawing.Point(198, 140);
+            this.metroLabel12.Location = new System.Drawing.Point(105, 140);
             this.metroLabel12.Name = "metroLabel12";
             this.metroLabel12.Size = new System.Drawing.Size(65, 19);
             this.metroLabel12.TabIndex = 1;
             this.metroLabel12.Text = "Consumo";
             // 
-            // metroLabel7
-            // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(101, 94);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(89, 19);
-            this.metroLabel7.TabIndex = 1;
-            this.metroLabel7.Text = "Padrão Corte";
-            // 
             // metroLabel11
             // 
             this.metroLabel11.AutoSize = true;
-            this.metroLabel11.Location = new System.Drawing.Point(133, 140);
+            this.metroLabel11.Location = new System.Drawing.Point(4, 140);
             this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(51, 19);
+            this.metroLabel11.Size = new System.Drawing.Size(50, 19);
             this.metroLabel11.TabIndex = 1;
             this.metroLabel11.Text = "Pastejo";
             // 
             // metroLabel10
             // 
             this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Location = new System.Drawing.Point(68, 140);
+            this.metroLabel10.Location = new System.Drawing.Point(218, 95);
             this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel10.Size = new System.Drawing.Size(43, 19);
             this.metroLabel10.TabIndex = 1;
             this.metroLabel10.Text = "Perda";
             // 
@@ -312,7 +258,7 @@
             this.metroLabel13.AutoSize = true;
             this.metroLabel13.Location = new System.Drawing.Point(3, 187);
             this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(79, 19);
+            this.metroLabel13.Size = new System.Drawing.Size(80, 19);
             this.metroLabel13.TabIndex = 1;
             this.metroLabel13.Text = "Observação";
             // 
@@ -328,9 +274,9 @@
             // metroLabel9
             // 
             this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(3, 140);
+            this.metroLabel9.Location = new System.Drawing.Point(101, 95);
             this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(55, 19);
+            this.metroLabel9.Size = new System.Drawing.Size(56, 19);
             this.metroLabel9.TabIndex = 1;
             this.metroLabel9.Text = "Suporte";
             // 
@@ -422,6 +368,33 @@
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button4.UseVisualStyleBackColor = false;
             // 
+            // maskDataAvaliacao
+            // 
+            this.maskDataAvaliacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.maskDataAvaliacao.Location = new System.Drawing.Point(7, 116);
+            this.maskDataAvaliacao.Mask = "00/00/0000";
+            this.maskDataAvaliacao.Name = "maskDataAvaliacao";
+            this.maskDataAvaliacao.Size = new System.Drawing.Size(92, 20);
+            this.maskDataAvaliacao.TabIndex = 16;
+            this.maskDataAvaliacao.ValidatingType = typeof(System.DateTime);
+            // 
+            // txtDescanso
+            // 
+            this.txtDescanso.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtDescanso.Location = new System.Drawing.Point(220, 162);
+            this.txtDescanso.Name = "txtDescanso";
+            this.txtDescanso.Size = new System.Drawing.Size(95, 20);
+            this.txtDescanso.TabIndex = 18;
+            // 
+            // metroLabel7
+            // 
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Location = new System.Drawing.Point(220, 140);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(63, 19);
+            this.metroLabel7.TabIndex = 17;
+            this.metroLabel7.Text = "Descanso";
+            // 
             // frmCadastroLocais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -451,12 +424,9 @@
         #endregion
 
         private MetroFramework.Controls.MetroGrid metroGrid1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroPanel metroPanel1;
-        private MetroFramework.Controls.MetroLabel metroLabel8;
         private MetroFramework.Controls.MetroLabel metroLabel12;
-        private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroLabel metroLabel11;
         private MetroFramework.Controls.MetroLabel metroLabel10;
         private MetroFramework.Controls.MetroLabel metroLabel13;
@@ -466,21 +436,21 @@
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtGraminea;
+        private System.Windows.Forms.TextBox txtObs;
+        private System.Windows.Forms.TextBox txtConsumo;
+        private System.Windows.Forms.TextBox txtPastejo;
+        private System.Windows.Forms.TextBox txtPerda;
+        private System.Windows.Forms.TextBox txtSuporte;
+        private System.Windows.Forms.TextBox txtArea;
+        private System.Windows.Forms.TextBox txtCod;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.MaskedTextBox maskDataAvaliacao;
+        private System.Windows.Forms.TextBox txtDescanso;
+        private MetroFramework.Controls.MetroLabel metroLabel7;
     }
 }

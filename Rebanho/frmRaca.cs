@@ -93,7 +93,7 @@ namespace Rebanho
         {
             if (verificaCampos())
             {
-                MessageBox.Show("Campo código está vazio");
+                MessageBox.Show("Selecione um registro para ser atualizado");
             }
             else
             {
