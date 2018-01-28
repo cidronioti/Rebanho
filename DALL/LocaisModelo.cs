@@ -8,7 +8,7 @@ namespace DALL
 {
     public class LocaisModelo
     {
-        private int cod;
+        private string cod;
         private string nome;
         private double area;
         private string graminea;
@@ -20,7 +20,7 @@ namespace DALL
         private int descanso;
         private string obs;
 
-        public int Cod
+        public string Cod
         {
             get { return cod; }
             set { cod = value; }

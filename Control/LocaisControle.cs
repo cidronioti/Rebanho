@@ -9,14 +9,14 @@ using System.Data;
 
 namespace Control
 {
-    class LocaisControle
+    public class LocaisControle
     {
         private MySqlConnection conexao;
         private MySqlCommand comando;
         string caminho = "SERVER=localhost;DATABASE=berromysql;UID=root;PASSWORD=";
-        
+        LocaisModelo lm = new LocaisModelo();
 
-        public void cadastroRaca(LocaisModelo l)
+        public void cadastraLocal(LocaisModelo l)
         {
             try
             {
@@ -38,14 +38,14 @@ namespace Control
             }
         }
 
-        public void atualizaRaca(LocaisModelo l)
+        public void atualizaLocal(LocaisModelo l)
         {
             try
             {
                 conexao = new MySqlConnection(caminho);
                 conexao.Open();
-               // string atualiza = "UPDATE raca SET NOME_RACA='" + r.Nome + "',PERIODO_GESTACAO='" + r.PeriodoGestacao + "' WHERE COD_RACA='" + r.Cod + "'";
-                //comando = new MySqlCommand(atualiza, conexao);
+                string atualiza = "UPDATE local1 SET NOME_LOCAL='" + l.Nome + "',AREA_LOCAL='" + l.Area + "',GRAMINEA='" + l.Graminea + "',DATA_AVALIACAO='" + l.DataAvaliacao + "',SUPORTE='" + l.Suporte + "',PASTEJO='" + l.Pastejo + "',PERDA='" + l.Perda + "',CONSUMO='" + l.Consumo + "',DESCANSO='" + l.Descanso + "',OBS='" + l.Obs + "' WHERE COD_LOCAL='" + l.Cod + "'";
+                comando = new MySqlCommand(atualiza, conexao);
                 comando.ExecuteNonQuery();
                 conexao.Close();
 
@@ -56,15 +56,15 @@ namespace Control
             }
         }
 
-        public void deleteRaca(LocaisModelo l)
+        public void deleteLocal(string parametro)
         {
             try
             {
                 conexao = new MySqlConnection(caminho);
                 conexao.Open();
-               // string atualiza = "DELETE FROM raca WHERE COD_RACA='" + r.Cod + "'";
-                //comando = new MySqlCommand(atualiza, conexao);
-                //comando.ExecuteNonQuery();
+                string atualiza = "DELETE FROM local1 WHERE COD_local='" + parametro + "'";
+                comando = new MySqlCommand(atualiza, conexao);
+                comando.ExecuteNonQuery();
             }
             catch (MySqlException ex)
             {
@@ -81,7 +81,7 @@ namespace Control
             try
             {
                 conexao = new MySqlConnection(caminho);
-                comando = new MySqlCommand("SELECT * FROM raca", conexao);
+                comando = new MySqlCommand("SELECT * FROM local1", conexao);
 
                 MySqlDataAdapter mda = new MySqlDataAdapter();
                 mda.SelectCommand = comando;
@@ -94,6 +94,59 @@ namespace Control
             catch (MySqlException ex)
             {
                 throw new Exception("Erro - " + ex);
+            }
+        }
+
+        public DataTable preencheTabelaBuscaComParametro(string parametro)
+        {
+            try
+            {
+                conexao = new MySqlConnection(caminho);
+                comando = new MySqlCommand("SELECT cod_local, nome_local FROM local1 WHERE nome_local LIKE '%" + parametro + "%'", conexao);
+                MySqlDataAdapter mda = new MySqlDataAdapter();
+                mda.SelectCommand = comando;
+                DataTable dt = new DataTable();
+                mda.Fill(dt);
+                return dt;
+            }
+            catch (MySqlException ex)
+            {
+                throw new Exception("Erro - " + ex);
+            }
+        }
+
+        public LocaisModelo buscaPorCodigo(string parametro)
+        {
+            try
+            {
+                conexao = new MySqlConnection(caminho);
+                comando = new MySqlCommand("SELECT * FROM local1  WHERE cod_local = '" + parametro + "'", conexao);
+                conexao.Open();
+                MySqlDataReader leitor = comando.ExecuteReader();
+                while (leitor.Read())
+                {
+                    lm.Cod = leitor["cod_local"].ToString();
+                    lm.Nome = leitor["nome_local"].ToString();
+                    lm.Area = Convert.ToDouble(leitor["area_local"].ToString());
+                    lm.Graminea = leitor["graminea"].ToString();
+                    lm.DataAvaliacao = leitor["data_avaliacao"].ToString();
+                    lm.Suporte = Convert.ToInt32(leitor["suporte"].ToString());
+                    lm.Perda = Convert.ToDouble(leitor["perda"].ToString());
+                    lm.Pastejo = Convert.ToDouble(leitor["pastejo"].ToString());
+                    lm.Consumo = Convert.ToDouble(leitor["consumo"].ToString());
+                    lm.Descanso = Convert.ToInt32(leitor["descanso"].ToString());
+                    lm.Obs = leitor["obs"].ToString();
+                    
+                }
+                return lm;
+            }
+            catch (MySqlException ex)
+            {
+                throw new Exception("Erro - " + ex);
+            }
+            finally
+            {
+                conexao.Close();
             }
         }
     }
