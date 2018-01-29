@@ -53,6 +53,7 @@
     <Compile Include="EnderecoModelo.cs" />
     <Compile Include="LocaisModelo.cs" />
     <Compile Include="MedicamentoModelo.cs" />
+    <Compile Include="ProprietarioModelo.cs" />
     <Compile Include="RacaModelo.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

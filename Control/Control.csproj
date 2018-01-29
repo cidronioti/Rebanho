@@ -54,6 +54,7 @@
     <Compile Include="ManipulaData.cs" />
     <Compile Include="MedicametoControle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProprietarioControle.cs" />
     <Compile Include="Racaontrole.cs" />
     <Compile Include="UnidadeControle.cs" />
     <Compile Include="ValidaCPFControle.cs" />
