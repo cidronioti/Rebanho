@@ -196,33 +196,38 @@ namespace Rebanho
         {
             if (e.ColumnIndex > 0)
             {
-                mm = mc.buscaPorCodigo((int) metroGrid1.CurrentRow.Cells[0].Value);
-                txtCod.Text = mm.Cod.ToString();
-                txtCodBarras.Text = mm.CodBarras.ToString();
-                txtNomeComercial.Text = mm.NomeComercial;
-                txtPrincipioAtivo.Text = mm.PrincipioAtivo;
-                maskValidade.Text = mm.Validade;
-                cbCategoria.Text = cc.retornaNomeCategoria(mm.CodCategoria);
-                txtApresentacao.Text = mm.Apresentacao;
-                txtQtdPorEmbalagem.Text = mm.QuantidadePorEmbalagem.ToString();
-                txtQtdEmbalagens.Text = mm.QuantidadeDeEmbalagem.ToString();
-                cbUnidade.Text = uc.retornaNomeUnidade(mm.CodUnidade);
-                txtQtdMin.Text = mm.QuantidadeMin.ToString();
-                txtPrecoCompra.Text = mm.PrecoCompra.ToString();
-                txtLaboratorio.Text = mm.Laboratorio;
-                txtIndicacao.Text = mm.Indicacoes;
-                txtModoUso.Text = mm.ModoUso;
-                txtObs.Text = mm.Obs;
-                txtCaminhoFoto.Text = mm.CaminhoFoto;
+                try
+                {
+                    mm = mc.buscaPorCodigo((int)metroGrid1.CurrentRow.Cells[0].Value);
+                    txtCod.Text = mm.Cod.ToString();
+                    txtCodBarras.Text = mm.CodBarras.ToString();
+                    txtNomeComercial.Text = mm.NomeComercial;
+                    txtPrincipioAtivo.Text = mm.PrincipioAtivo;
+                    maskValidade.Text = mm.Validade;
+                    cbCategoria.Text = cc.retornaNomeCategoria(mm.CodCategoria);
+                    txtApresentacao.Text = mm.Apresentacao;
+                    txtQtdPorEmbalagem.Text = mm.QuantidadePorEmbalagem.ToString();
+                    txtQtdEmbalagens.Text = mm.QuantidadeDeEmbalagem.ToString();
+                    cbUnidade.Text = uc.retornaNomeUnidade(mm.CodUnidade);
+                    txtQtdMin.Text = mm.QuantidadeMin.ToString();
+                    txtPrecoCompra.Text = mm.PrecoCompra.ToString();
+                    txtLaboratorio.Text = mm.Laboratorio;
+                    txtIndicacao.Text = mm.Indicacoes;
+                    txtModoUso.Text = mm.ModoUso;
+                    txtObs.Text = mm.Obs;
+                    txtCaminhoFoto.Text = mm.CaminhoFoto;
 
-                if (mm.Foto == null)
-                {
-                    pictureBox2.Image = null;
-                }else
-                {
-                    MemoryStream ms = new MemoryStream(mm.Foto);
-                    //pictureBox2.Image = System.Drawing.Image.FromStream(ms);
+                    if (mm.Foto == null)
+                    {
+                        pictureBox2.Image = null;
+                    }
+                    else
+                    {
+                        MemoryStream ms = new MemoryStream(mm.Foto);
+                        //pictureBox2.Image = System.Drawing.Image.FromStream(ms);
+                    }
                 }
+                catch (Exception ex) { }
 
             }
         }

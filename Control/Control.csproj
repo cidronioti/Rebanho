@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="AnimalControle.cs" />
     <Compile Include="CategoriaControle.cs" />
+    <Compile Include="CausasMortisControle.cs" />
     <Compile Include="ClienteControle.cs" />
     <Compile Include="ConectaDbControle.cs" />
     <Compile Include="EnderecoControle.cs" />

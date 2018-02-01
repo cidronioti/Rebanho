@@ -8,8 +8,14 @@ namespace Modelo
 {
     public class CausasMortisModelo
     {
-        private String nome;
+        private string cod;
+        private string nome;
 
+        public string Cod
+        {
+            get { return cod; }
+            set { cod = value; }
+        }
         public string Nome
         {
             get { return nome; }

@@ -231,21 +231,25 @@ namespace Rebanho
         {
             if (e.ColumnIndex > 0)
             {
-                cm = cc.buscaClienteCPF(metroGrid1.CurrentRow.Cells[0].Value.ToString());
-                txtCodigo.Text = cm.Cod.ToString();
-                txtNome.Text = cm.Nome;
-                maskCpf.Text = cm.Cpf;
-                txtRg.Text = cm.Rg;
-                maskFone.Text = cm.Fone;
-                txtPropriedade.Text = cm.Propriedade;
+                try
+                {
+                    cm = cc.buscaClienteCPF(metroGrid1.CurrentRow.Cells[0].Value.ToString());
+                    txtCodigo.Text = cm.Cod.ToString();
+                    txtNome.Text = cm.Nome;
+                    maskCpf.Text = cm.Cpf;
+                    txtRg.Text = cm.Rg;
+                    maskFone.Text = cm.Fone;
+                    txtPropriedade.Text = cm.Propriedade;
 
-                em = cc.retornaEndereco();
-                txtRua.Text = em.Rua;
-                txtNumero.Text = em.Numero;
-                txtBairro.Text = em.Bairro;
-                txtCidade.Text = em.Cidade;
-                txtObs.Text = em.Obs;
-                maskedTextBox3.Text = em.Cep;
+                    em = cc.retornaEndereco();
+                    txtRua.Text = em.Rua;
+                    txtNumero.Text = em.Numero;
+                    txtBairro.Text = em.Bairro;
+                    txtCidade.Text = em.Cidade;
+                    txtObs.Text = em.Obs;
+                    maskedTextBox3.Text = em.Cep;
+                }
+                catch (Exception ex) { }
             }
         }
 
