@@ -156,5 +156,13 @@ namespace Rebanho
         {
             Dispose();
         }
+
+        private void txtBusca_Leave(object sender, EventArgs e)
+        {
+            if (txtBusca.Text == "")
+            {
+                txtBusca.Text = "BUSCA POR NOME...";
+            }
+        }
     }
 }

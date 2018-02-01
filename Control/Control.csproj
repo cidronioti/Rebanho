@@ -50,6 +50,7 @@
     <Compile Include="ClienteControle.cs" />
     <Compile Include="ConectaDbControle.cs" />
     <Compile Include="EnderecoControle.cs" />
+    <Compile Include="EventoSanitarioZooControle.cs" />
     <Compile Include="LocaisControle.cs" />
     <Compile Include="ManipulaData.cs" />
     <Compile Include="MedicametoControle.cs" />

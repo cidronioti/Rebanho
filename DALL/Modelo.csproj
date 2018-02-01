@@ -51,6 +51,7 @@
     <Compile Include="CoberturasModelo.cs" />
     <Compile Include="ClienteModelo.cs" />
     <Compile Include="EnderecoModelo.cs" />
+    <Compile Include="EventoSanitarioZooModelo.cs" />
     <Compile Include="LocaisModelo.cs" />
     <Compile Include="MedicamentoModelo.cs" />
     <Compile Include="ProprietarioModelo.cs" />

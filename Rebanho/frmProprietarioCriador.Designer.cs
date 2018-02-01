@@ -34,6 +34,8 @@
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtCod = new System.Windows.Forms.TextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.button5 = new System.Windows.Forms.Button();
@@ -42,10 +44,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.lblNumRegistros = new MetroFramework.Controls.MetroLabel();
-            this.txtCod = new System.Windows.Forms.TextBox();
-            this.txtNome = new System.Windows.Forms.TextBox();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.txtBusca = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.metroPanel1.SuspendLayout();
@@ -124,6 +124,23 @@
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // txtNome
+            // 
+            this.txtNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtNome.Location = new System.Drawing.Point(87, 27);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(262, 20);
+            this.txtNome.TabIndex = 4;
+            // 
+            // txtCod
+            // 
+            this.txtCod.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtCod.Location = new System.Drawing.Point(6, 27);
+            this.txtCod.MaxLength = 3;
+            this.txtCod.Name = "txtCod";
+            this.txtCod.Size = new System.Drawing.Size(70, 20);
+            this.txtCod.TabIndex = 3;
             // 
             // metroLabel3
             // 
@@ -220,15 +237,6 @@
             this.panel1.Size = new System.Drawing.Size(185, 204);
             this.panel1.TabIndex = 14;
             // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(10, 182);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(89, 19);
-            this.metroLabel4.TabIndex = 7;
-            this.metroLabel4.Text = "Nº Registros: ";
-            // 
             // lblNumRegistros
             // 
             this.lblNumRegistros.AutoSize = true;
@@ -238,31 +246,25 @@
             this.lblNumRegistros.TabIndex = 8;
             this.lblNumRegistros.Text = "0";
             // 
-            // txtCod
+            // metroLabel4
             // 
-            this.txtCod.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCod.Location = new System.Drawing.Point(6, 27);
-            this.txtCod.MaxLength = 3;
-            this.txtCod.Name = "txtCod";
-            this.txtCod.Size = new System.Drawing.Size(70, 20);
-            this.txtCod.TabIndex = 3;
-            // 
-            // txtNome
-            // 
-            this.txtNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNome.Location = new System.Drawing.Point(87, 27);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(262, 20);
-            this.txtNome.TabIndex = 4;
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(10, 182);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(89, 19);
+            this.metroLabel4.TabIndex = 7;
+            this.metroLabel4.Text = "Nº Registros: ";
             // 
             // txtBusca
             // 
             this.txtBusca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtBusca.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txtBusca.Location = new System.Drawing.Point(23, 38);
             this.txtBusca.Name = "txtBusca";
             this.txtBusca.Size = new System.Drawing.Size(185, 20);
             this.txtBusca.TabIndex = 15;
             this.txtBusca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBusca_KeyPress);
+            this.txtBusca.Leave += new System.EventHandler(this.txtBusca_Leave);
             // 
             // frmProprietarioCriador
             // 
